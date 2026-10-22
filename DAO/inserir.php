@@ -25,7 +25,7 @@
                 return "Não inserido!";
 
             }
-            catch(\Exception $erro)
+            catch(Exception $erro)
             {
                 return "Impossível cadastrar empresa <br><br> $erro";
             }

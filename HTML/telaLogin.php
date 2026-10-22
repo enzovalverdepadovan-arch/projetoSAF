@@ -56,17 +56,13 @@
         <?php } ?>
 
         <form method="POST">
-            <label for="usuario">
-                E-mail
-                <input type="text" id="usuario" name="usuario" placeholder="Digite seu e-mail"
-                       maxlength="100" autocomplete="username" required>
-            </label>
+            <label for="usuario">E-mail</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Digite seu e-mail" maxlength="100" autocomplete="username" required>
+            
 
-            <label for="senha">
-                Senha
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
-                       autocomplete="current-password" required>
-            </label>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+            
 
             <button type="submit">Entrar</button>
         </form>

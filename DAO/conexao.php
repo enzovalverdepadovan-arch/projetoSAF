@@ -11,7 +11,7 @@
                     echo "Conexão Falhou!";
                 }
             }
-            catch(\Exception $erro)
+            catch(Exception $erro)
             {
                 echo "Algo deu errado ".$erro;
             }//fim do catch

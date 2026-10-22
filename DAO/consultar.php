@@ -18,11 +18,11 @@
                 while($dados = mysqli_fetch_Array($result)){
                     return $dados['nome'];//Achou o usuário, devolve o nome
                 }//fim do while
-                return "";//Não achou ninguém com esse e-mail e senha
+                return '';//Não achou ninguém com esse e-mail e senha
             }
-            catch(\Exception $erro)
+            catch(Exception $erro)
             {
-                return "";
+                return '';
             }
         }//fim do autenticarFuncionario
     }//fim do consultar
