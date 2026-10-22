@@ -1,0 +1,205 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0a033b;
+    background: #f4f6fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    place-items: center;
+}
+
+/* Cartão principal (painel azul + formulário) */
+.tela {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: min(100%, 920px);
+    min-height: 560px;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgb(10 3 59 / 14%);
+}
+
+/* Versão mais larga, usada na tela de empresa */
+.tela-empresa {
+    grid-template-columns: 1fr 1.4fr;
+    width: min(100%, 1020px);
+}
+
+/* Painel azul da esquerda */
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(32px, 6vw, 56px);
+    background: #0a033b;
+    color: #fcfdfc;
+}
+
+.marca {
+    margin: 0;
+    color: #a2f9b3;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.mensagem h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.mensagem p,
+.rodape {
+    color: #d5d4e1;
+    line-height: 1.6;
+}
+
+.rodape {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+/* Lado direito com o formulário */
+.painel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(28px, 5vw, 52px);
+}
+
+.painel h2 {
+    margin: 0 0 8px;
+    font-size: 1.7rem;
+}
+
+.introducao {
+    margin: 0 0 24px;
+    color: #65637a;
+    line-height: 1.5;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+/* Dois campos lado a lado */
+.linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+label {
+    display: grid;
+    gap: 8px;
+    font-size: 0.92rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 1px solid #d5d4df;
+    border-radius: 9px;
+    background: #fff;
+    color: #0a033b;
+    font: inherit;
+}
+
+input:focus {
+    border-color: #0a033b;
+    outline: 3px solid rgb(162 249 179 / 70%);
+}
+
+button {
+    min-height: 50px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 9px;
+    background: #a2f9b3;
+    color: #0a033b;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #84e99a;
+}
+
+/* Caixas de mensagem */
+.erro,
+.sucesso,
+.aviso {
+    margin: 0 0 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.erro {
+    border: 1px solid #f0b7b7;
+    background: #fff0f0;
+    color: #a11b1b;
+}
+
+.sucesso {
+    border: 1px solid #a2d9b0;
+    background: #effaf2;
+    color: #1b6b2f;
+}
+
+.aviso {
+    margin: 0;
+    border: 1px solid #d5d4df;
+    background: #eef0fa;
+    color: #0a033b;
+}
+
+.ajuda {
+    margin: 24px 0 0;
+    color: #65637a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Celular */
+@media (max-width: 760px) {
+    body {
+        padding: 16px;
+    }
+
+    .tela,
+    .tela-empresa {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .apresentacao {
+        min-height: 200px;
+        gap: 32px;
+    }
+
+    .rodape {
+        display: none;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+    }
+}
